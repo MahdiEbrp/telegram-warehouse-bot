@@ -1,0 +1,106 @@
+
+> telegram-warehouse-bot@1.3.0 test:coverage
+> vitest run --coverage
+
+
+ RUN  v5.0.5 /home/user/telegram-warehouse-bot
+      Coverage enabled with v8
+
+ ✓ src/tests/integration/forms.test.ts (36 tests) 11630ms
+   ✓ scoped callbacks, disabled-action enforcement and reliability (15)
+     ✓ also applies the replay budget to discarded out-of-order updates 3719ms
+     ✓ bounds an abusive replay session and closes without business writes 5958ms
+ ✓ src/tests/integration/tracking.test.ts (14 tests) 1233ms
+ ✓ src/tests/integration/stress-harness.test.ts (2 tests) 794ms
+   ✓ offline stress runner contract (2)
+     ✓ executes all role recipes with asynchronous response isolation and validates database/session invariants 784ms
+ ✓ src/tests/unit/tracking.test.ts (22 tests) 592ms
+ ✓ src/tests/unit/parcels.test.ts (18 tests) 678ms
+ ✓ src/tests/integration/bot.test.ts (12 tests) 569ms
+ ✓ src/tests/integration/management.test.ts (10 tests) 542ms
+ ✓ src/tests/integration/parcels-export.test.ts (7 tests) 519ms
+ ✓ src/tests/unit/exports.test.ts (9 tests) 352ms
+ ✓ src/tests/integration/contention.test.ts (2 tests) 276ms
+ ✓ src/tests/unit/orders.test.ts (10 tests) 220ms
+ ✓ src/tests/unit/products-users.test.ts (10 tests) 142ms
+ ✓ src/tests/integration/webhook.test.ts (11 tests) 166ms
+ ✓ src/tests/integration/upgrade.test.ts (3 tests) 118ms
+ ✓ src/tests/unit/reliability.test.ts (3 tests) 86ms
+ ✓ src/tests/unit/preflight.test.ts (3 tests) 82ms
+ ✓ src/tests/integration/parcels-upgrade.test.ts (2 tests) 71ms
+ ✓ src/tests/unit/local-database.test.ts (2 tests) 36ms
+ ✓ src/tests/unit/domain.test.ts (22 tests) 37ms
+ ✓ src/tests/unit/validation-security.test.ts (25 tests) 25ms
+
+ Test Files  20 passed (20)
+      Tests  223 passed (223)
+   Start at  08:00:19
+   Duration  34.35s (tests 58%, import 39%, worker 1%, transform 1%)
+
+     Import  88 modules were evaluated 141 times · 12.31s total, 39% of tracked time
+             ~4.63s faster with isolate: false — shared modules are evaluated once per worker instead of once per file
+             learn more: https://vitest.dev/guide/improving-performance#test-isolation
+
+ % Coverage report from v8
+-------------------|---------|----------|---------|---------|-------------------
+File               | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+-------------------|---------|----------|---------|---------|-------------------
+All files          |   92.91 |    85.94 |   97.05 |   94.03 |                   
+ bot               |     100 |      100 |     100 |     100 |                   
+  factory.ts       |     100 |      100 |     100 |     100 |                   
+  labels.ts        |     100 |      100 |     100 |     100 |                   
+ bot/handlers      |   88.56 |    83.33 |   90.36 |   88.98 |                   
+  ...nistration.ts |   63.23 |    54.54 |   76.92 |   64.17 | ...,76-79,112-113 
+  exports.ts       |     100 |       50 |     100 |     100 | 34                
+  main.ts          |     100 |      100 |     100 |     100 |                   
+  orders.ts        |   96.51 |     94.2 |    87.5 |   98.78 | 71                
+  products.ts      |   88.52 |    65.51 |   85.71 |   88.13 | 88-94             
+  reports.ts       |     100 |       90 |     100 |     100 | 49                
+  shipping.ts      |   91.91 |    88.09 |   95.65 |   91.48 | 165-166,171-177   
+ bot/keyboards     |     100 |    93.33 |     100 |     100 |                   
+  common.ts        |     100 |      100 |     100 |     100 |                   
+  main.ts          |     100 |     92.3 |     100 |     100 | 12,15             
+ bot/middleware    |   86.66 |       74 |     100 |   88.88 |                   
+  auth.ts          |    90.9 |    85.71 |     100 |      95 | 11                
+  errors.ts        |   73.07 |    56.25 |     100 |      72 | 32,39,44-49       
+  reliability.ts   |   90.62 |       75 |     100 |   96.15 | 60                
+  storage.ts       |     100 |      100 |     100 |     100 |                   
+ bot/scenes        |   90.08 |     82.5 |    98.9 |   92.32 |                   
+  ...nistration.ts |      95 |    83.33 |     100 |   94.73 | 66-67             
+  cart.ts          |   88.49 |    76.56 |     100 |   93.93 | ...64,172,197-198 
+  order-create.ts  |     100 |      100 |     100 |     100 |                   
+  order-search.ts  |    91.3 |     62.5 |     100 |   90.47 | 48-49             
+  product-add.ts   |     100 |      100 |     100 |     100 |                   
+  product-edit.ts  |    86.2 |    78.57 |    90.9 |   85.18 | 56-57,77-78       
+  selections.ts    |   88.57 |       70 |     100 |    87.5 | 40-41,81-82       
+  shipment-edit.ts |   88.23 |    91.93 |     100 |   87.75 | ...80-181,185-186 
+  stock-adjust.ts  |   81.08 |    66.66 |     100 |   87.87 | 12-13,48-49       
+  wizard-form.ts   |   89.28 |       85 |     100 |      92 | 123-124,148-149   
+  wizard.ts        |   91.87 |    84.84 |   96.29 |   94.28 | ...15-316,351,374 
+ bot/ui            |     100 |      100 |     100 |     100 |                   
+  cards.ts         |     100 |      100 |     100 |     100 |                   
+ db/queries        |   97.27 |    90.67 |    97.4 |   98.09 |                   
+  common.ts        |   93.33 |    88.63 |   88.88 |      95 | 40-41             
+  exports.ts       |    91.3 |    86.66 |     100 |   95.23 | 32                
+  index.ts         |     100 |      100 |     100 |     100 |                   
+  orders.ts        |   98.01 |    92.68 |      90 |   98.97 | 166               
+  products.ts      |   97.18 |    80.95 |     100 |   97.14 | 131-135           
+  references.ts    |     100 |      100 |     100 |     100 |                   
+  reports.ts       |     100 |    63.63 |     100 |     100 | 27-33,42,63       
+  settings.ts      |     100 |      100 |     100 |     100 |                   
+  shipments.ts     |   99.25 |    97.02 |     100 |     100 | 85,409,440        
+  users.ts         |   92.85 |    85.71 |     100 |   92.85 | 39-40             
+ lib               |   98.42 |     90.9 |   98.61 |    98.7 |                   
+  errors.ts        |     100 |       75 |     100 |     100 | 26-28             
+  money.ts         |     100 |      100 |     100 |     100 |                   
+  permissions.ts   |     100 |    88.09 |     100 |     100 | 60,64,73-75,80    
+  preflight.ts     |     100 |    72.72 |     100 |     100 | 24-95             
+  reference.ts     |     100 |      100 |     100 |     100 |                   
+  shipping.ts      |     100 |      100 |     100 |     100 |                   
+  text.ts          |     100 |      100 |     100 |     100 |                   
+  time.ts          |     100 |      100 |     100 |     100 |                   
+  urls.ts          |      90 |      100 |     100 |   88.88 | 21                
+  validation.ts    |     100 |     90.9 |     100 |     100 | 29                
+  webhook.ts       |   94.11 |    92.85 |      80 |   95.55 | 41,87             
+  xlsx.ts          |     100 |    84.61 |     100 |     100 | 91-101,109-110    
+-------------------|---------|----------|---------|---------|-------------------

@@ -1,0 +1,48 @@
+{
+  "checkedAt": "2026-10-25T07:47:20.624287+00:00",
+  "full": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {},
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 44,
+        "dev": 139,
+        "optional": 127,
+        "peer": 33,
+        "peerOptional": 0,
+        "total": 230
+      }
+    }
+  },
+  "production": {
+    "auditReportVersion": 2,
+    "vulnerabilities": {},
+    "metadata": {
+      "vulnerabilities": {
+        "info": 0,
+        "low": 0,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 0
+      },
+      "dependencies": {
+        "prod": 44,
+        "dev": 139,
+        "optional": 127,
+        "peer": 33,
+        "peerOptional": 0,
+        "total": 230
+      }
+    }
+  },
+  "note": "Registry advisory audit, not a security certification."
+}

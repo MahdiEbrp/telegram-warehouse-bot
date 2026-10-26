@@ -1,0 +1,9 @@
+node_modules/
+.next/
+coverage/
+data/
+drizzle/
+package-lock.json
+*.zip
+.env*
+next-env.d.ts

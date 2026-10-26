@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>انبار و فروش · پیش‌نمایش رابط بومی تلگرام</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #edf4fa;
+        --muted: #91a6b9;
+        --line: #263b50;
+        --accent: #65d8c2;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: #0a1320;
+        color: var(--ink);
+        font:
+          15px/1.9 Tahoma,
+          Arial,
+          sans-serif;
+      }
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        background: radial-gradient(ellipse at 85% 0%, #12354780, transparent 50%);
+      }
+      main {
+        position: relative;
+        max-width: 1190px;
+        margin: auto;
+        padding: 42px 32px 28px;
+      }
+      .eyebrow {
+        direction: ltr;
+        text-align: right;
+        font:
+          11px/1.5 Arial,
+          sans-serif;
+        letter-spacing: 3px;
+        color: var(--accent);
+      }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid var(--line);
+      }
+      h1 {
+        font-size: 26px;
+        line-height: 1.6;
+        margin: 10px 0 0;
+        font-weight: 600;
+      }
+      .badge {
+        white-space: nowrap;
+        color: var(--accent);
+        border: 1px solid #65d8c255;
+        border-radius: 20px;
+        padding: 6px 15px;
+        font-size: 12px;
+      }
+      .layout {
+        display: grid;
+        grid-template-columns: minmax(300px, 1fr) 410px;
+        gap: 72px;
+        align-items: start;
+        padding-top: 38px;
+      }
+      .intro {
+        color: var(--muted);
+        max-width: 530px;
+        margin-top: 0;
+      }
+      .notice {
+        border-right: 3px solid var(--accent);
+        background: #132637;
+        padding: 12px 18px;
+        font-size: 13px;
+        border-radius: 8px;
+        color: #c7d8e4;
+      }
+      h2 {
+        font-size: 21px;
+        line-height: 1.8;
+        margin: 32px 0 10px;
+      }
+      #note {
+        min-height: 72px;
+        color: var(--muted);
+      }
+      select,
+      .control {
+        font: inherit;
+        color: var(--ink);
+        border: 1px solid #36516b;
+        background: #172b3e;
+        border-radius: 10px;
+        padding: 10px 12px;
+        cursor: pointer;
+      }
+      select {
+        width: 100%;
+        margin-top: 14px;
+      }
+      .controls {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        margin-top: 12px;
+      }
+      .control:hover {
+        border-color: var(--accent);
+      }
+      #count {
+        font:
+          12px Arial,
+          sans-serif;
+        color: var(--muted);
+        margin-right: auto;
+        direction: ltr;
+      }
+      .control:disabled {
+        opacity: 0.3;
+        cursor: default;
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin: 28px 0;
+      }
+      .fact {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        padding: 12px 15px;
+        font-size: 12px;
+        color: var(--muted);
+      }
+      .fact strong {
+        display: block;
+        color: var(--ink);
+        font-size: 14px;
+      }
+      .phone {
+        border: 1px solid #34465b;
+        border-radius: 30px;
+        padding: 9px;
+        background: #080f19;
+        box-shadow: 0 25px 90px #0007;
+        overflow: hidden;
+      }
+      .screen {
+        border-radius: 22px;
+        overflow: hidden;
+        background: #102232;
+        min-height: 640px;
+      }
+      .status {
+        display: flex;
+        justify-content: space-between;
+        direction: ltr;
+        background: #182b3d;
+        padding: 12px 20px 0;
+        font: 11px Arial;
+        color: #a8bdce;
+      }
+      .chat-header {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        padding: 17px;
+        background: #182b3d;
+        border-bottom: 1px solid #2a3d50;
+      }
+      .avatar {
+        display: grid;
+        place-items: center;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: #329784;
+        color: white;
+        font-size: 21px;
+      }
+      .bot-name {
+        font-size: 14px;
+      }
+      .sub {
+        font-size: 11px;
+        color: var(--muted);
+      }
+      .chat {
+        padding: 18px 13px 22px;
+        min-height: 540px;
+        background: radial-gradient(circle at 90% 20%, #23443d55, transparent 55%), #102232;
+      }
+      .bubble {
+        background: #20384b;
+        border-radius: 15px 15px 4px 15px;
+        padding: 16px 16px 8px;
+        box-shadow: 0 2px 4px #0002;
+      }
+      #message {
+        white-space: pre-wrap;
+        font:
+          13px/1.95 Tahoma,
+          Arial,
+          sans-serif;
+        overflow-wrap: anywhere;
+        margin: 0;
+        color: #edf4f9;
+      }
+      .time {
+        font: 10px Arial;
+        text-align: left;
+        color: #85a0b7;
+        margin-top: 8px;
+        direction: ltr;
+      }
+      #keyboard {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        margin-top: 6px;
+      }
+      .keyrow {
+        display: flex;
+        gap: 5px;
+      }
+      .key {
+        flex: 1;
+        min-width: 0;
+        border: 0;
+        border-radius: 7px;
+        padding: 10px 6px;
+        background: #2a465c;
+        color: white;
+        font:
+          12px/1.6 Tahoma,
+          Arial,
+          sans-serif;
+        cursor: pointer;
+        overflow-wrap: anywhere;
+      }
+      .key[data-style="primary"] {
+        background: #3079b3;
+      }
+      .key[data-style="success"] {
+        background: #318867;
+      }
+      .key[data-style="danger"] {
+        background: #a84855;
+      }
+      .key:disabled {
+        background: #203345;
+        color: #6f8799;
+        cursor: default;
+      }
+      .key:hover:enabled {
+        filter: brightness(1.15);
+      }
+      .composer {
+        padding: 13px 17px;
+        background: #182b3d;
+        color: #6f899c;
+        font-size: 12px;
+      }
+      .caption {
+        text-align: center;
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 12px;
+      }
+      #toast {
+        font-size: 12px;
+        color: var(--accent);
+        min-height: 44px;
+        margin-top: 15px;
+      }
+      footer {
+        border-top: 1px solid var(--line);
+        margin-top: 40px;
+        padding-top: 20px;
+        font-size: 11px;
+        color: var(--muted);
+      }
+      @media (max-width: 850px) {
+        main {
+          padding: 24px 18px;
+        }
+        .layout {
+          grid-template-columns: 1fr;
+          gap: 25px;
+        }
+        .phone {
+          max-width: 420px;
+          width: 100%;
+          margin: auto;
+          grid-row: 2;
+        }
+        h1 {
+          font-size: 22px;
+        }
+        .badge {
+          display: none;
+        }
+        .intro {
+          max-width: none;
+        }
+        #note {
+          min-height: 0;
+        }
+        .facts {
+          margin: 20px 0;
+        }
+        header {
+          align-items: start;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <div class="eyebrow">WAREHOUSE / TELEGRAM NATIVE / V1.3</div>
+          <h1>کمتر سردرگم شو؛ مرحله‌به‌مرحله ثبت کن.</h1>
+        </div>
+        <span class="badge">پیش‌نمایش آفلاین · بدون شبکه</span>
+      </header>
+      <section class="layout">
+        <div>
+          <p class="intro">
+            رابط بومی بات با کارت‌های فارسی، دکمه‌های نقش‌محور و فرم‌های تک‌فیلدی. متن و کیبورد این
+            صفحه از پاسخ‌های واقعی کد بات در TestBot گرفته شده‌اند؛ این فایل یک Web App عملیاتی یا
+            تصویرِ گرفته‌شده از تلگرام نیست.
+          </p>
+          <div class="notice">
+            داده‌ها کاملاً ساختگی‌اند. قاب، رنگ و چینش، تقریب نمایشی هستند؛ ظاهر نهایی به نسخه و
+            پوستهٔ برنامهٔ تلگرام بستگی دارد.
+          </div>
+          <h2 id="title"></h2>
+          <p id="note"></p>
+          <label for="select">نمای ثبت‌شده را انتخاب کنید</label
+          ><select id="select"></select>
+          <div class="controls">
+            <button class="control" id="prev">نمای قبل</button
+            ><button class="control" id="next">نمای بعد</button><span id="count"></span>
+          </div>
+          <div class="facts">
+            <div class="fact"><strong>یک فیلد، یک تصمیم</strong>بعدی فقط با مقدار معتبر</div>
+            <div class="fact"><strong>قبلی واقعی</strong>بدون پاک‌شدن پیش‌نویس</div>
+            <div class="fact"><strong>مرور، سپس تأیید</strong>ثبت فقط با اقدام نهایی</div>
+            <div class="fact"><strong>دسترسی سمت سرور</strong>دکمهٔ مخفی، کافی نیست</div>
+          </div>
+          <div id="toast" aria-live="polite"></div>
+        </div>
+        <div>
+          <div class="phone">
+            <div class="screen">
+              <div class="status"><span>12:14</span><span>● ● ● ▰</span></div>
+              <div class="chat-header">
+                <div class="avatar">▥</div>
+                <div>
+                  <div class="bot-name">انبار و فروش · محیط نمایشی</div>
+                  <div class="sub">bot · دادهٔ مصنوعی</div>
+                </div>
+              </div>
+              <div class="chat">
+                <div class="bubble">
+                  <pre id="message"></pre>
+                  <div class="time">12:14 ✓✓</div>
+                </div>
+                <div id="keyboard"></div>
+              </div>
+              <div class="composer">پیام…　　⌨️</div>
+            </div>
+          </div>
+          <div class="caption">رندر تقریبی رابط بومی؛ بدون درخواست به تلگرام</div>
+        </div>
+      </section>
+      <footer>
+        Backend only · Next.js / grammY / conversations / Drizzle / libSQL — فرم‌ها و RBAC در بات
+        اجرا می‌شوند، نه در این فایل نمایشی. برای ثبت دوبارهٔ نماها: npm run ui:preview
+      </footer>
+    </main>
+    <script>
+      const data = __UI_DATA__;
+      let index = 0;
+      const get = (id) => document.getElementById(id);
+      data.shots.forEach((shot, i) => {
+        const option = document.createElement("option");
+        option.value = i;
+        option.textContent = shot.title;
+        get("select").append(option);
+      });
+      function render() {
+        const shot = data.shots[index];
+        get("title").textContent = shot.title;
+        get("note").textContent = shot.note;
+        get("message").textContent = shot.text;
+        get("select").value = index;
+        get("count").textContent = `${index + 1} / ${data.shots.length}`;
+        get("prev").disabled = index === 0;
+        get("next").disabled = index === data.shots.length - 1;
+        get("toast").textContent = "";
+        get("keyboard").replaceChildren();
+        for (const row of shot.keyboard) {
+          if (!row.length) continue;
+          const line = document.createElement("div");
+          line.className = "keyrow";
+          for (const key of row) {
+            const button = document.createElement("button");
+            button.className = "key";
+            button.textContent = key.text;
+            button.disabled = "disabled" in key;
+            button.dataset.style = key.style || "";
+            button.onclick = () =>
+              (get("toast").textContent =
+                "این دکمه بخشی از نمای ثبت‌شده است؛ برای مرور نمونه‌ها از «نمای بعد/قبل» استفاده کنید. هیچ داده‌ای ثبت یا به تلگرام ارسال نمی‌شود.");
+            line.append(button);
+          }
+          get("keyboard").append(line);
+        }
+      }
+      get("select").onchange = (event) => {
+        index = Number(event.target.value);
+        render();
+      };
+      get("prev").onclick = () => {
+        index--;
+        render();
+      };
+      get("next").onclick = () => {
+        index++;
+        render();
+      };
+      render();
+    </script>
+  </body>
+</html>

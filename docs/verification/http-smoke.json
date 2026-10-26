@@ -1,0 +1,107 @@
+{
+  "release": "1.3.0",
+  "sourceSha256": "aca15a7a0285810187ab7611da629dea131676435d3897e2b98d6a444bfa3404",
+  "checkedAt": "2026-10-25T08:04:08.834704+00:00",
+  "passed": true,
+  "checks": [
+    {
+      "check": "root",
+      "method": "GET",
+      "path": "/",
+      "expected": 200,
+      "actual": 200,
+      "passed": true
+    },
+    {
+      "check": "liveness",
+      "method": "GET",
+      "path": "/api/health",
+      "expected": 200,
+      "actual": 200,
+      "passed": true
+    },
+    {
+      "check": "method",
+      "method": "GET",
+      "path": "/api/telegram/webhook",
+      "expected": 405,
+      "actual": 405,
+      "passed": true
+    },
+    {
+      "check": "secret",
+      "method": "POST",
+      "path": "/api/telegram/webhook",
+      "expected": 401,
+      "actual": 401,
+      "passed": true
+    },
+    {
+      "check": "json",
+      "method": "POST",
+      "path": "/api/telegram/webhook",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    {
+      "check": "ignored-update",
+      "method": "POST",
+      "path": "/api/telegram/webhook",
+      "expected": 200,
+      "actual": 200,
+      "passed": true
+    },
+    {
+      "check": "body-limit",
+      "method": "POST",
+      "path": "/api/telegram/webhook",
+      "expected": 413,
+      "actual": 413,
+      "passed": true
+    },
+    {
+      "check": "mime",
+      "method": "POST",
+      "path": "/api/telegram/webhook",
+      "expected": 415,
+      "actual": 415,
+      "passed": true
+    },
+    {
+      "check": "envelope",
+      "method": "POST",
+      "path": "/api/telegram/webhook",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    {
+      "check": "text-bound",
+      "method": "POST",
+      "path": "/api/telegram/webhook",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    {
+      "check": "identity-bound",
+      "method": "POST",
+      "path": "/api/telegram/webhook",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    },
+    {
+      "check": "callback-byte-bound",
+      "method": "POST",
+      "path": "/api/telegram/webhook",
+      "expected": 400,
+      "actual": 400,
+      "passed": true
+    }
+  ],
+  "server": "next start production, local 0.0.0.0:3000",
+  "credentials": "synthetic; no routed business updates or live Telegram exercise",
+  "deploymentVerified": false
+}

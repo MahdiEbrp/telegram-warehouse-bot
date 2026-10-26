@@ -1,0 +1,12 @@
+{
+  "release": "1.3.0",
+  "checkedAt": "2026-10-25T08:02:59.755Z",
+  "browser": "156.0.8078.4",
+  "screens": 12,
+  "widths": [1280, 390],
+  "validatedScreens": 24,
+  "pageErrors": [],
+  "httpRequests": [],
+  "passed": true,
+  "scope": "Offline HTML approximation of real TestBot captures, not the Telegram native client"
+}

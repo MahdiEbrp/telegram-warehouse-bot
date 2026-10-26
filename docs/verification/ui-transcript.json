@@ -1,0 +1,422 @@
+{
+  "notice": "Offline synthetic captures, not actual Telegram client screenshots",
+  "release": "1.3.0",
+  "realNetworkAttempts": 0,
+  "shots": [
+    {
+      "id": "dashboard",
+      "title": "داشبورد مدیرکل",
+      "note": "نمایش نقش، شروع سریع و بخش‌های مجاز؛ این رندر از pipeline واقعی بات در TestBot ثبت شده است.",
+      "text": "🏠 داشبورد انبار و فروش\n━━━━━━━━━━━━━━━━\n👤 مدیر نمایش  •  مدیرکل\n\nشروع سریع یا بخش موردنظر را انتخاب کنید.\n🧭 فرم‌ها: یک فیلد در هر مرحله؛ قبلی، بعدی و انصراف دکمه‌ای.\n🔒 محیط داخلی کارکنان؛ مشتری اعلان یا دسترسی خودکار ندارد.",
+      "keyboard": [
+        [
+          {
+            "text": "➕ سفارش جدید",
+            "callback_data": "o:new",
+            "style": "primary"
+          },
+          {
+            "text": "➕ محصول جدید",
+            "callback_data": "p:add",
+            "style": "success"
+          }
+        ],
+        [
+          {
+            "text": "📦 مدیریت محصولات",
+            "callback_data": "p:list:0"
+          },
+          {
+            "text": "🛒 مدیریت سفارشات",
+            "callback_data": "o:list:0"
+          }
+        ],
+        [
+          {
+            "text": "📊 گزارش‌ها",
+            "callback_data": "r:menu"
+          },
+          {
+            "text": "🚚 صف آماده‌سازی ارسال",
+            "callback_data": "o:queue:ready:0"
+          }
+        ],
+        [
+          {
+            "text": "👥 مدیریت کاربران",
+            "callback_data": "u:list:0"
+          },
+          {
+            "text": "⚙️ تنظیمات",
+            "callback_data": "s:menu"
+          }
+        ],
+        [
+          {
+            "text": "❓ راهنمای استفاده",
+            "callback_data": "m:help"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "field-empty",
+      "title": "یک فیلد در هر مرحله",
+      "note": "در اولین مرحله، قبلی و بعدی غیرفعال‌اند. هنوز داده‌ای ثبت نشده است.",
+      "text": "🧭 افزودن محصول\n━━━━━━━━━━━━━━━━\n۱/۶  ●○○○○○\n\nنام محصول را وارد کنید.\n\nمقدار: هنوز وارد نشده\n\nفقط همین فیلد را تکمیل کنید؛ سپس «مرحله بعد» را بزنید.",
+      "keyboard": [
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "disabled": {}
+          },
+          {
+            "text": "مرحله بعد ➡️",
+            "disabled": {}
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:0:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "field-valid",
+      "title": "مقدار معتبر، بدون پرش خودکار",
+      "note": "نوشتن نام فقط پیش‌نویس را تغییر می‌دهد؛ بعدی اکنون فعال است.",
+      "text": "🧭 افزودن محصول\n━━━━━━━━━━━━━━━━\n۱/۶  ●○○○○○\n\nنام محصول را وارد کنید.\n\nمقدار: کفش روزمره\n\n⚠️ دریافت شد؛ برای ادامه «مرحله بعد» را بزنید یا مقدار را اصلاح کنید.\n\nفقط همین فیلد را تکمیل کنید؛ سپس «مرحله بعد» را بزنید.",
+      "keyboard": [
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "disabled": {}
+          },
+          {
+            "text": "مرحله بعد ➡️",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:1:next",
+            "style": "primary"
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:1:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "sku",
+      "title": "مرحله دوم: SKU",
+      "note": "ناوبری دکمه‌ای است؛ مقدار متنی فقط برای همین فیلد دریافت می‌شود.",
+      "text": "🧭 افزودن محصول\n━━━━━━━━━━━━━━━━\n۲/۶  ●●○○○○\n\nSKU یکتا؛ مانند SKU-001\n\nمقدار: هنوز وارد نشده\n\nفقط همین فیلد را تکمیل کنید؛ سپس «مرحله بعد» را بزنید.",
+      "keyboard": [
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:2:back"
+          },
+          {
+            "text": "مرحله بعد ➡️",
+            "disabled": {}
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:2:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "price",
+      "title": "قیمت با ارقام فارسی",
+      "note": "اعداد فارسی و جداکنندهٔ هزارگان به عدد صحیح تومان تبدیل می‌شوند.",
+      "text": "🧭 افزودن محصول\n━━━━━━━━━━━━━━━━\n۳/۶  ●●●○○○\n\nقیمت فروش به تومان (عدد صحیح)\n\nمقدار: 250000\n\n⚠️ دریافت شد؛ برای ادامه «مرحله بعد» را بزنید یا مقدار را اصلاح کنید.\n\nفقط همین فیلد را تکمیل کنید؛ سپس «مرحله بعد» را بزنید.",
+      "keyboard": [
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:5:back"
+          },
+          {
+            "text": "مرحله بعد ➡️",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:5:next",
+            "style": "primary"
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:5:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "category-selected",
+      "title": "گزینه انتخاب شد؛ بعدی جداگانه",
+      "note": "علامت ✓ فقط انتخاب را نشان می‌دهد؛ دکمهٔ بعدی مرحله را عوض می‌کند.",
+      "text": "🧭 افزودن محصول\n━━━━━━━━━━━━━━━━\n۵/۶  ●●●●●○\n\nدسته‌بندی محصول\n\nمقدار: پوشاک و کفش\n\n⚠️ گزینه انتخاب شد؛ «مرحله بعد» را بزنید.\n\nفقط همین فیلد را تکمیل کنید؛ سپس «مرحله بعد» را بزنید.",
+      "keyboard": [
+        [
+          {
+            "text": "✓ پوشاک و کفش",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:9:o0"
+          }
+        ],
+        [
+          {
+            "text": "بدون دسته‌بندی / ریشه",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:9:o1"
+          }
+        ],
+        [
+          {
+            "text": "⬅️ قبلی",
+            "disabled": {}
+          },
+          {
+            "text": "1/1",
+            "disabled": {}
+          },
+          {
+            "text": "بعدی ➡️",
+            "disabled": {}
+          }
+        ],
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:9:back"
+          },
+          {
+            "text": "مرحله بعد ➡️",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:9:next",
+            "style": "primary"
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:9:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "review",
+      "title": "مرور نهایی قبل از ثبت",
+      "note": "همهٔ فیلدهای فرم در خلاصه دیده می‌شوند؛ تأیید سبز تنها نقطهٔ ثبت است.",
+      "text": "🧭 افزودن محصول\n━━━━━━━━━━━━━━━━\n۶/۶  ●●●●●●\n📦 پیش‌نمایش محصول\nنام: کفش روزمره\nSKU: SHOE-12\nقیمت: ۲۵۰٬۰۰۰ تومان\nموجودی: 12\nدسته‌بندی: پوشاک و کفش\nحداقل موجودی پیش‌فرض: ۵\nبهای خرید پیش‌فرض: ۰ (قابل ویرایش)\n\nذخیره فقط با تأیید نهایی انجام می‌شود. با «مرحله قبل» می‌توانید اصلاح کنید.",
+      "keyboard": [
+        [
+          {
+            "text": "✅ تأیید نهایی",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:a:yes",
+            "style": "success"
+          }
+        ],
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:a:back"
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:a:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "retained-stock",
+      "title": "قبلی، با مقدار محفوظ",
+      "note": "بازگشت از مرور به دسته و سپس موجودی؛ عدد ۱۲ دوباره تایپ نشده است.",
+      "text": "🧭 افزودن محصول\n━━━━━━━━━━━━━━━━\n۴/۶  ●●●●○○\n\nموجودی اولیه\n\nمقدار: 12\n\nفقط همین فیلد را تکمیل کنید؛ سپس «مرحله بعد» را بزنید.",
+      "keyboard": [
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:c:back"
+          },
+          {
+            "text": "مرحله بعد ➡️",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:c:next",
+            "style": "primary"
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:pa:Ndjm481fSbVKeRA0Lg0IiQ:c:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "cart",
+      "title": "سبد چندقلمی",
+      "note": "ویرایش تعداد، حذف قلم و تازه‌سازی قیمت/موجودی؛ این سبد هنوز رزرو نشده است.",
+      "text": "🧭 ثبت سفارش\n━━━━━━━━━━━━━━━━\n۱/۷  ●○○○○○○\n🛒 سبد سفارش\n1. محصول آزمایشی × 2 — ۲۰۰٬۰۰۰ تومان\nجمع: ۲۰۰٬۰۰۰ تومان\n",
+      "keyboard": [
+        [
+          {
+            "text": "✏️ محصول آزمایشی × 2",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:4:edit.0"
+          },
+          {
+            "text": "🗑 حذف قلم",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:4:drop.0"
+          }
+        ],
+        [
+          {
+            "text": "➕ افزودن کالای دیگر",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:4:add"
+          }
+        ],
+        [
+          {
+            "text": "🔄 به‌روزکردن قیمت و موجودی",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:4:refresh"
+          }
+        ],
+        [
+          {
+            "text": "مرحله بعد: اطلاعات مشتری ➡️",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:4:next",
+            "style": "primary"
+          }
+        ],
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "disabled": {}
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:4:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "customer",
+      "title": "اطلاعات مشتری، یک فیلد",
+      "note": "نام، تلفن و نشانی در مرحله‌های جدا دریافت می‌شوند؛ مشتری حساب کارکنان فعال نمی‌گیرد.",
+      "text": "🧭 ثبت سفارش\n━━━━━━━━━━━━━━━━\n۲/۷  ●●○○○○○\n\nشناسهٔ عددی تلگرام مشتری؛ دسترسی مدیریتی ایجاد نمی‌شود.\nتغییر شناسه، نام و تلفن و نشانی مشتری را برای تکمیل مجدد پاک می‌کند.\n\nمقدار: هنوز وارد نشده\n\nفقط همین فیلد را تکمیل کنید؛ سپس «مرحله بعد» را بزنید.",
+      "keyboard": [
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:5:back"
+          },
+          {
+            "text": "مرحله بعد ➡️",
+            "disabled": {}
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:5:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "cart-back",
+      "title": "بازگشت واقعی به همان سبد",
+      "note": "دکمهٔ قبلی سبد را از اول نمی‌سازد؛ همان اقلام و تعداد نگه داشته شده‌اند.",
+      "text": "🧭 ثبت سفارش\n━━━━━━━━━━━━━━━━\n۱/۷  ●○○○○○○\n🛒 سبد سفارش\n1. محصول آزمایشی × 2 — ۲۰۰٬۰۰۰ تومان\nجمع: ۲۰۰٬۰۰۰ تومان\n",
+      "keyboard": [
+        [
+          {
+            "text": "✏️ محصول آزمایشی × 2",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:6:edit.0"
+          },
+          {
+            "text": "🗑 حذف قلم",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:6:drop.0"
+          }
+        ],
+        [
+          {
+            "text": "➕ افزودن کالای دیگر",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:6:add"
+          }
+        ],
+        [
+          {
+            "text": "🔄 به‌روزکردن قیمت و موجودی",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:6:refresh"
+          }
+        ],
+        [
+          {
+            "text": "مرحله بعد: اطلاعات مشتری ➡️",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:6:next",
+            "style": "primary"
+          }
+        ],
+        [
+          {
+            "text": "⬅️ مرحله قبل",
+            "disabled": {}
+          }
+        ],
+        [
+          {
+            "text": "✖️ انصراف",
+            "callback_data": "w:oc:LR--ZZKGT5VODwkY7UmE8Q:6:cancel",
+            "style": "danger"
+          }
+        ]
+      ]
+    },
+    {
+      "id": "viewer",
+      "title": "داشبورد متناسب با نقش",
+      "note": "مشاهده‌گر دکمهٔ ساخت سفارش، مدیریت کاربران یا تنظیمات ندارد؛ مخفی‌سازی جایگزین RBAC سمت سرور نیست.",
+      "text": "🏠 داشبورد انبار و فروش\n━━━━━━━━━━━━━━━━\n👤 همکار مشاهده‌گر  •  مشاهده‌گر\n\nشروع سریع یا بخش موردنظر را انتخاب کنید.\n🧭 فرم‌ها: یک فیلد در هر مرحله؛ قبلی، بعدی و انصراف دکمه‌ای.\n🔒 محیط داخلی کارکنان؛ مشتری اعلان یا دسترسی خودکار ندارد.",
+      "keyboard": [
+        [
+          {
+            "text": "📦 موجودی محصولات",
+            "callback_data": "p:list:0"
+          }
+        ],
+        [
+          {
+            "text": "📊 گزارش‌ها",
+            "callback_data": "r:menu"
+          }
+        ],
+        [
+          {
+            "text": "❓ راهنمای استفاده",
+            "callback_data": "m:help"
+          }
+        ]
+      ]
+    }
+  ]
+}

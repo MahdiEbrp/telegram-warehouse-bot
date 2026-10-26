@@ -1,0 +1,38 @@
+{
+  "release": "1.3.0",
+  "passed": true,
+  "method": "Independent ZIP extraction, fresh npm ci, complete npm run check, then byte/hash comparison of the tested source",
+  "startedAt": "2026-10-25T08:04:13.156789+00:00",
+  "sourceSha256": "aca15a7a0285810187ab7611da629dea131676435d3897e2b98d6a444bfa3404",
+  "sourceFiles": 109,
+  "finishedAt": "2026-10-25T08:07:58.358544+00:00",
+  "testedSourceFilesUnchanged": true,
+  "gates": {
+    "cleanInstall": "passed",
+    "prettier": "passed",
+    "typecheck": "passed",
+    "coverageFloors": "passed",
+    "fullOfflineStress": "passed",
+    "productionBuild": "passed",
+    "productionAudit": "0 reported vulnerabilities"
+  },
+  "tests": 223,
+  "testFiles": 20,
+  "testDurationSeconds": 37.17,
+  "coveragePercent": {
+    "statements": 92.91,
+    "branches": 85.94,
+    "functions": 97.05,
+    "lines": 94.03
+  },
+  "independentStress": {
+    "completedUpdates": 5000,
+    "peakConcurrentHandlers": 50,
+    "all20Invariants": true,
+    "unexpectedFailures": 0,
+    "realNetworkAttempts": 0,
+    "durationMs": 16839.32
+  },
+  "packagingNote": "Final documentation/evidence added after the test; executable source bytes and fingerprints are identical. Final archive is re-extracted and byte-checked separately.",
+  "deploymentVerified": false
+}

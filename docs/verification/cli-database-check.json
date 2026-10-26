@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "checkedAt": "2026-10-25T07:47:20.312Z",
+  "database": "temporary file SQLite, same source migrations",
+  "applicationTables": 15,
+  "users": 1,
+  "superAdmins": 1,
+  "categories": 1,
+  "settings": 1,
+  "audit": 1,
+  "migrations": 3,
+  "migrateRuns": 2,
+  "seedRuns": 2,
+  "bootstrapRuns": 2,
+  "readOnlyReadinessUnchanged": true,
+  "readiness": {
+    "orders": 0,
+    "shipments": 0
+  },
+  "foreignKeysEnabled": true,
+  "foreignKeyViolations": 0,
+  "integrity": "ok",
+  "cleanupExpiredRemovedAndFreshRetained": true,
+  "productionLocalFileRejected": true,
+  "migrationDrift": false,
+  "allMigrationBytesMatchV12": true
+}
